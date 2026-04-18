@@ -38,7 +38,7 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         message_text = update.message.text
 
         # Формируем сообщение для владельца
-        owner_message = f"{username} (ID: {user_id}): {message_text}"
+        owner_message = f" {message_text}"
         await context.bot.send_message(chat_id=OWNER_ID, text=owner_message)
 
         # Отвечаем пользователю в том же чате
